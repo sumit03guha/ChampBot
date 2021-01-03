@@ -1,7 +1,7 @@
 # ChampBot
 A discord bot.
 
-A discord bot made with the purpose of sending random unique motivational quotes to the users each time they call for it.
+A discord bot made with the purpose of sending random unique motivational quotes to the users each time they call for it, with the prefix "$".
 
 The source of the quotes is - https://zenquotes.io/
 
