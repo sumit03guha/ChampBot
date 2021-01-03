@@ -1,0 +1,2 @@
+# ChampBot
+A discord bot.
