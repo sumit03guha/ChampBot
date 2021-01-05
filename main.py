@@ -7,24 +7,20 @@ import random
 
 client = discord.Client()
 
-
 def get_quote():
     response = requests.get('https://zenquotes.io/api/random')
     json_data = json.loads(response.text)
     quote = json_data[0]['q'] + "\n- " + json_data[0]['a']
     return (quote)
 
-
 def get_html():
     things = ['CSS', 'lmth', 'Data Scientist', 'YouKnowWho', 'That guy!']
     word = random.choice(things)
     return word
 
-
 def commands():
     return 'hello\narnold\nhtml'
     
-
 @client.event
 async def on_ready():
 	print(f"Up and running.\n {client.user}")
@@ -45,6 +41,6 @@ async def on_message(message):
     if message.content.startswith("$commands"):
         await message.channel.send(commands())
 
-
 keep_alive()
+
 client.run(os.getenv('TOKEN'))
