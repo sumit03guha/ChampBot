@@ -23,12 +23,13 @@ def get_html():
 
 def commands():
     return 'hello\narnold\nhtml'
-
+    
 
 @client.event
 async def on_ready():
-    print(f"Up and running.\n {client.user}")
-
+	print(f"Up and running.\n {client.user}")
+	game = discord.Activity(name="Motivation", type=5)
+	await client.change_presence(activity=game)
 
 @client.event
 async def on_message(message):
